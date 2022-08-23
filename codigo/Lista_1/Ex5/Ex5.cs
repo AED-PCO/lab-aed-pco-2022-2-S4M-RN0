@@ -4,21 +4,22 @@ namespace Ex5
 {
     class Program
     {
-        static int Fat(int n)
-        {
-            if (n==2)
-            {
-                return 2;
-            }
-
-            return n*Fat(n-1);
-        }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Digite um número inteiro");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\nO fatorial é: " + Fat(n));
+            int fat = Convert.ToInt32(Console.ReadLine());
+            int cont=fat, rfat=0;
+
+            rfat = fat * (fat-1);
+            fat--;
+            while (cont != 3)
+            {
+                rfat = rfat *(fat-1);
+                fat--;
+                cont--;
+            }
+
+            Console.WriteLine("\nO fatorial é: " + rfat);
         }
     }
 }
