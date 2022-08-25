@@ -26,10 +26,16 @@ namespace Ex6
         static void Main(string[] args)
         {
             Console.WriteLine("Digite uma frase");
-            String f = Console.ReadLine();
-            f = f.ToLower();
-
-            Console.WriteLine($"A frase modificada é: {Frase(f, f.Length-1)}");
+            var f = Console.ReadLine();
+            if (f != null)
+            {
+                f = f.ToLower();
+                Console.WriteLine($"A frase modificada é: {Frase(f, f.Length-1)}");
+            }
+            else
+            {
+                Console.WriteLine("Erro! Digite uma frase");
+            }
         }
     }
 }
