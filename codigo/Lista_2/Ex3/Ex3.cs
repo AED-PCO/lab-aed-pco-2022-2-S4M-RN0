@@ -6,8 +6,12 @@ namespace Ex3
     {
         static int Pot(int a, int b)
         {
-            double result = Math.Pow(a, b);
-            return Convert.ToInt32(result);
+            if (b != 1)
+            {
+                a *= Pot(a, b-1);
+            }
+
+            return a;
         }
 
         static void Main(string[] args)
