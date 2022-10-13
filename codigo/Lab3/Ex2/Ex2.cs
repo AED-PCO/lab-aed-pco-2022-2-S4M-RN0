@@ -23,7 +23,7 @@ namespace Ex2
                 {
                     max = mid - 1;
                 }
-                else return mid.ToString();
+                else return "Posição " + mid.ToString();
             }
 
             return "Número não encontrado";
